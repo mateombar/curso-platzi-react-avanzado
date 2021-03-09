@@ -19,7 +19,7 @@ export const UserForm = ({ onSubmit, title, text, loading, error, isRegistered, 
             <Text>{text}</Text>
             <Form onSubmit={handleSubmit} disabled={loading}>
                 {loading && <Loader />}
-                <Input placeholder="Email" {...email} disabled={loading} />
+                <Input placeholder="Email" type="email" {...email} disabled={loading} />
                 <Input type="password" placeholder="password" {...password} disabled={loading} />
                 <SubmitButton disabled={loading}>{title}</SubmitButton>
                 {error && <ErrorMessage message={error} title={false} />}
